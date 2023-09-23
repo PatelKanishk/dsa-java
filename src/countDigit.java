@@ -7,7 +7,7 @@ public class countDigit {
 
         System.out.println("Number of digits: " + count10(n));
 
-        System.out.println("The number is Armstrong? " + isArmstrong(n));
+        System.out.println("The number is Armstrong?: " + isArmstrong(n));
     }
 
     // v basic algorithm
