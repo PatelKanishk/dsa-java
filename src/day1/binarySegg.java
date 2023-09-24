@@ -1,3 +1,4 @@
+package day1;
 public class binarySegg {
     
     public static void main(String[] args) {
