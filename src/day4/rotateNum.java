@@ -4,7 +4,7 @@ public class rotateNum {
     
     public static void main(String[] args) {
         int n = 12345;
-        int k = 2;
+        int k = 7;
         Rotate(n, k);
     }
 
@@ -20,18 +20,20 @@ public class rotateNum {
     }
 
     public static void Rotate(int n, int k) {
-        double i = n / Math.pow(10, k);
-        double j = n % Math.pow(10, k);
-        double numOfRotation = Math.pow(10, (Count(n)-k));
+        if (k < 0) {
+            k = k + Count(n);
+        } else if (k > Count(n)) {
+            k = k % Count(n);
+        }
 
-        int rotation = (int)numOfRotation;
-        int x = (int)i;
-        int y = (int)j;
+        int q = n / (int)Math.pow(10, k);
+        int r = n % (int)Math.pow(10, k);
+        int rotation = (int)Math.pow(10, (Count(n)-k));
 
-        // System.out.println(x);
-        // System.out.println(y);
+        // System.out.println(q);
+        // System.out.println(r);
 
-        n = y * rotation + x;
+        n = r * rotation + q;
         System.out.println(n);
     }
 }
